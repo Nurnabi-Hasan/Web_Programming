@@ -28,3 +28,41 @@ border-radius: 8px;
     transition: 1s;
     cursor: pointer;
 }
+
+#highlightSection{
+    width: 70%;
+    margin: 50px auto;
+}
+
+#highlightSection >h2{
+    font-size: 45px;
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px rgb(243, 180, 180);
+
+}
+
+#highlightSection >p{
+    text-align: center;
+    width: 50%;
+    color: gray;
+    margin: 0 auto;
+    margin-bottom: 25px;
+}
+
+#buy_now_button{
+    display: flex;
+   justify-content: center;
+}
+    
+#cover-image-section{
+ 
+    width: 70%;
+    margin: 0 auto;
+
+}
+
+#cover-image-section img{
+    width: 100%;
+}
