@@ -165,3 +165,86 @@ border-radius: 8px;
     justify-content: center;
     display: flex;
 }
+
+#loader{ 
+   display: flex;
+   justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 40px;
+    aspect-ratio: 1;
+    color: #f03355;
+    position: relative;
+    background:
+      conic-gradient(from 134deg at top   ,currentColor 92deg,#0000 0) top,
+      conic-gradient(from -46deg at bottom,currentColor 92deg,#0000 0) bottom;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+  }
+  .loader:before {
+    content:'';
+    position: absolute;
+    inset: 0;
+    --g:currentColor 14.5px,#0000 0 calc(100% - 14.5px),currentColor 0;
+    background:
+      linear-gradient( 45deg,var(--g)),
+      linear-gradient(-45deg,var(--g));
+     animation: l7 1.5s infinite cubic-bezier(0.3,1,0,1);
+  }
+  @keyframes l7 {
+     33%  {inset:-10px;transform: rotate(0deg)}
+     66%  {inset:-10px;transform: rotate(90deg)}
+     100% {inset:0    ;transform: rotate(90deg)}
+  }
+
+  footer{
+    
+    /* margin: 0px auto; */
+    padding-top: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: rgb(230, 227, 227);
+
+} 
+
+.top-part{
+   display: flex;
+    justify-content: space-between;
+   margin: 0px auto; 
+}
+
+.top-part h3{
+color: grey; 
+ }
+
+#single-border{
+    border: 1px solid rgb(194, 186, 186);
+    
+}
+
+#icons{
+    padding-right: 20px;
+   font-size: 25px;
+}
+
+#footer-card-section{
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    grid-template-columns: repeat(4, 1fr);
+   gap: 20px;
+}
+
+.footer-card{
+    display: flex;
+    flex-direction: column;
+}

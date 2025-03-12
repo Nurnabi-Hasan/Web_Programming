@@ -1,8 +1,23 @@
 function handleSearch(){
+// loading start
+    loadingAnimationTogle(true);
+
     const inputSeaechElement = document.getElementById("searchTextField");
     const inputSeaechValue= inputSeaechElement.value;
     loadPhones(inputSeaechValue);
 }
+
+function loadingAnimationTogle(isLoading){
+    const loadingAnimation = document.getElementById("loader-animation");
+if(isLoading){
+    loadingAnimation.classList.remove("hidden");
+}
+else{
+    loadingAnimation.classList.add("hidden");
+}
+
+}
+
 
 const loadPhones = async (searchText) =>{
 
@@ -44,5 +59,6 @@ const displayPhones = (data) =>{
 
 });
 
+loadingAnimationTogle(false);
 
 }
