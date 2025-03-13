@@ -177,10 +177,10 @@ border-radius: 8px;
 
 
 /* HTML: <div class="loader"></div> */
-.loader {
+/* .loader {
     width: 40px;
     aspect-ratio: 1;
-    color: #f03355;
+    color: #10028f;
     position: relative;
     background:
       conic-gradient(from 134deg at top   ,currentColor 92deg,#0000 0) top,
@@ -202,7 +202,27 @@ border-radius: 8px;
      33%  {inset:-10px;transform: rotate(0deg)}
      66%  {inset:-10px;transform: rotate(90deg)}
      100% {inset:0    ;transform: rotate(90deg)}
+  } */
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 35px;
+    aspect-ratio: 1;
+    --_g: no-repeat radial-gradient(farthest-side,#070249 94%,#0000);
+    background:
+      var(--_g) 0    0,
+      var(--_g) 100% 0,
+      var(--_g) 100% 100%,
+      var(--_g) 0    100%;
+    background-size: 40% 40%;
+    animation: l38 .5s infinite; 
   }
+  @keyframes l38 {
+    100% {background-position: 100% 0,100% 100%,0 100%,0 0}
+  }
+
+
+
 
   footer{
     
